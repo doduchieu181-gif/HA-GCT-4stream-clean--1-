@@ -1,0 +1,18 @@
+{
+  "data": {
+    "manifest": "data/multivsl/manifest.csv", "layout": "TVC", "channels": "xy_conf",
+    "max_frames": 150, "fps": 30, "confidence_threshold": 0.3,
+    "zero_is_missing": false, "scale_normalization": true,
+    "filter_enabled": true, "min_cutoff": 1.0, "beta": 0.7, "signer_disjoint": true
+  },
+  "augment": {"enabled": true, "crop_probability": 0.5, "speed_probability": 0.5, "rotation_degrees": 15, "bone_scale": 0.05, "noise_std": 0.01, "random_placement": true},
+  "model": {"num_classes": 199, "d_model": 128, "spatial_layers": 3, "temporal_layers": 2, "num_heads": 4, "dropout": 0.1, "drop_path": 0.1},
+  "train": {
+    "seed": 42, "device": "auto", "batch_size": 8, "num_workers": 0,
+    "epochs": 100, "lr": 0.0003, "classifier_lr_multiplier": 1.0,
+    "weight_decay": 0.05, "warmup_epochs": 5, "min_lr_ratio": 0.01,
+    "accum_steps": 4, "amp": true, "clip_grad": 1.0,
+    "loss": "ce", "label_smoothing": 0.1, "balanced_sampling": false,
+    "mixup_alpha": 0.0, "patience": 20, "output_dir": "runs/multivsl_baseline"
+  }
+}

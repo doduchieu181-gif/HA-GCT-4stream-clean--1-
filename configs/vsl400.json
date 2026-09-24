@@ -1,0 +1,6 @@
+{
+  "data": {"manifest": "data/vsl400/manifest.csv", "layout": "TVC", "channels": "xy", "max_frames": 64, "fps": 30, "zero_is_missing": false, "scale_normalization": true, "filter_enabled": true, "signer_disjoint": false},
+  "augment": {"enabled": true},
+  "model": {"num_classes": 400, "d_model": 128, "spatial_layers": 3, "temporal_layers": 2, "num_heads": 4, "dropout": 0.1, "drop_path": 0.1},
+  "train": {"device": "auto", "batch_size": 8, "epochs": 100, "lr": 0.0003, "warmup_epochs": 5, "accum_steps": 4, "amp": true, "output_dir": "runs/vsl400_baseline"}
+}

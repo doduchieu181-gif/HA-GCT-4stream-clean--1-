@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ha-gct-four-stream-clean"
+version = "1.0.0"
+description = "Readable four-stream hand-aware graph convolution and temporal attention baseline"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "torch>=2.6,<3"]
+
+[tool.setuptools.packages.find]
+include = ["hagct*", "scripts*"]
